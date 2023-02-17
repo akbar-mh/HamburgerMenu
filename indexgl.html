@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/master/style.css">
+</head>
+<body>
+      <main class="container-fluid bg-success-subtle">
+        <header class="col-12  py-2">
+
+            <nav class="row px-0 mx-0">
+               <div class="d-md-none" onclick="dropMneu()">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </div>
+               <!-- desktop -->
+               <ul class="d-none d-md-flex justify-content-center col-12 border">
+    
+                   <li class="m-3">
+                       <a href="#">Home</a>
+                   </li>
+                   <li class="m-3">
+                       <a href="#">About</a>
+                   </li>
+                   <li class="m-3">
+                       <a href="#">Pages</a>
+                   </li>
+                   <li class="m-3">
+                       <a href="#">blogs</a>
+                   </li>
+                   <li class="m-3">
+                       <a href="#">conatct</a>
+                   </li>
+    
+               </ul>
+               <!-- mobile -->
+               <ul class="col-12 d-none d-md-none" id="b-menu">
+                   <li class="m-2 col-12 border-bottom border-dark">
+                       <a href="#">Home</a>
+                   </li>
+                   <li class="m-2 col-12 border-bottom border-dark">
+                       <a href="#">About</a>
+                   </li>
+                   <li class="m-2 col-12 border-bottom border-dark">
+                       <a href="#">Pages</a>
+                   </li>
+                   <li class="m-2 col-12 border-bottom border-dark">
+                       <a href="#">blogs</a>
+                   </li>
+                   <li class="m-2 col-12 border-bottom border-dark">
+                       <a href="#">conatct</a>
+                   </li>
+    
+               </ul>
+            </nav>
+        </header>
+        <!--  -->
+        <section class="contant ">
+            <figure class=" contant1 py-5 d-flex justify-content-center col-5 mx-auto">
+                <img src="assets/img/slid01.jpg" alt="" class="w-100">
+            </figure>
+            <ul class=" d-flex justify-content-center">
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid02.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid03.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid04.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid05.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid06.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid07.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid08.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid09.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid10.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid12.jpg" alt="" class="w-100 h-100">
+                </li>
+                <li onclick="change(this)" class="m-2 col-sm-3 col-lg-2">
+                    <img src="assets/img/slid11.jpg" alt="" class="w-100 h-100">
+                </li>
+            </ul>
+        </section>
+      </main>
+
+      <script>
+        function change(img){
+            y = img.children
+            y = y[0].getAttribute('src')
+            document.querySelector(".contant1>img").setAttribute('src', y)
+        }
+
+
+ 
+        let  flag = true
+        let show = document.getElementById("b-menu")
+        function dropMneu(){
+            if(flag){
+               show.classList.remove('d-none')
+                //flag = false
+            }else{
+               show.classList.add('d-none')
+                //flag = true
+            }
+            flag = !flag
+        } 
+      </script>  
+</body>
+</html>

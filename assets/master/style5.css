@@ -1,0 +1,92 @@
+header > nav > div {
+  transform: rotate();
+}
+header > nav > div > span {
+  display: flex;
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  margin: 13px;
+}
+header > nav > div > span:nth-of-type(1) {
+  transform-origin: top right;
+}
+header > nav > div > span:nth-of-type(3) {
+  transform-origin: bottom right;
+}
+header > nav > ul > li {
+  list-style: none;
+  position: relative;
+}
+header > nav > ul > li::after, header > nav > ul > li::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  transition: 1s;
+  background: linear-gradient(to left top, blue, red);
+}
+header > nav > ul > li::after {
+  bottom: -3px;
+  left: 0;
+}
+header > nav > ul > li::before {
+  top: 0;
+  right: 0;
+}
+header > nav > ul > li:hover::after {
+  width: 100%;
+}
+header > nav > ul > li:hover::before {
+  width: 100%;
+}
+header > nav > ul > li > a {
+  color: #000;
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+header > nav #b-menu {
+  /*  transform: translate(-100%); */
+  transition: all 1.3s linear 1s;
+  overflow: hidden;
+}
+header > nav #b-menu > li {
+  margin: 3px;
+}
+t header > nav #b-menu > li::after, header > nav #b-menu > li::before {
+  display: none;
+}
+header > nav #b-menu > li > a {
+  transition: 0.4s;
+}
+header > nav #b-menu > li > a:hover {
+  color: purple;
+}
+
+.anime-li1 {
+  animation: _li1 1s linear forwards;
+}
+
+@keyframes _li1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* ==== */
+.anime-li2 {
+  animation: _li2 1s linear forwards;
+}
+
+@keyframes _li2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style5.css.map */

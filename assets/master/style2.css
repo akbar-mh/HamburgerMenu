@@ -1,0 +1,38 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header > nav > div > span {
+  display: flex;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+header > nav > ul > li > a {
+  color: #272727;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+header > nav > ul > li > a:hover {
+  color: #943030;
+}
+header > nav #b-menu {
+  transform: translate(-100%);
+  transition: 1s;
+}
+
+#sp1 {
+  transform-origin: top left;
+}
+
+#sp2 {
+  transform-origin: bottom left;
+}/*# sourceMappingURL=style2.css.map */

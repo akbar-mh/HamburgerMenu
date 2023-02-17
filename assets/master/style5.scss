@@ -1,0 +1,109 @@
+header{
+    >nav{
+        >div{
+          
+            >span{
+                display: flex;
+                width: 60px;
+                height: 3px;
+                background-color:#000;
+                margin: 13px;
+                &:nth-of-type(1){
+                    transform-origin: top right;
+                }
+                &:nth-of-type(3){
+                    transform-origin: bottom right;
+                }
+               
+            }
+            transform: rotate();
+        }
+        >ul{
+            >li{
+                list-style: none;
+               
+                   
+                position: relative;
+                &::after,&::before{
+                    content: '';
+                    display: flex;
+                    position: absolute;
+                    height: 2px;
+                    width: 0;
+                    transition: 1s;
+                    background:linear-gradient(to left top, blue, red);
+                  
+                }
+                &::after{
+                    bottom: -3px;
+                    left: 0;
+                  
+             
+                   
+                }
+                &::before{
+                    top: 0;
+                    right: 0;
+                  
+                   
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:hover::before{
+                    width: 100%;
+                }
+                >a{
+                    color: #000;
+                    font-size: 25px;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        #b-menu{
+           /*  transform: translate(-100%); */
+            transition: all 1.3s linear 1s;
+        overflow: hidden;
+        >li{
+            margin: 3px;
+          
+        t  
+           
+            &::after,&::before{
+                display: none;
+            }
+            >a{
+                transition: .4s;
+               &:hover{
+                color: purple;
+               }
+            }
+        }
+        }
+    }
+}
+.anime-li1{
+    animation: _li1 1s linear forwards;
+}
+@keyframes _li1 {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        
+        transform: translateX(0);
+    }
+}
+/* ==== */
+.anime-li2{
+    animation: _li2 1s linear forwards;
+}
+@keyframes _li2 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/master/style5.css">
+</head>
+<body>
+    <header class="col-12  py-2">
+
+        <nav class="row px-0 mx-0">
+           <div class="d-md-none" onclick="dropMneu(this)" id="toggel">
+               <span></span>
+               <span></span>
+               <span></span>
+           </div>
+           <!-- desktop -->
+           <ul class="d-none d-md-flex justify-content-center col-12 border">
+
+               <li class="m-3">
+                   <a href="#">Home</a>
+               </li>
+               <li class="m-3">
+                   <a href="#">About</a>
+               </li>
+               <li class="m-3">
+                   <a href="#">Pages</a>
+               </li>
+               <li class="m-3">
+                   <a href="#">blogs</a>
+               </li>
+               <li class="m-3">
+                   <a href="#">conatct</a>
+               </li>
+
+           </ul>
+           <!-- mobile -->
+           <ul class="mobile col-12 d-md-none bg-primary-subtle" id="b-menu">
+               <li class="m-2 col-12 border-bottom border-dark">
+                   <a href="#">Home</a>
+               </li>
+               <li class="m-2 col-12 border-bottom border-dark">
+                   <a href="#">About</a>
+               </li>
+               <li class="m-2 col-12 border-bottom border-dark">
+                   <a href="#">Pages</a>
+               </li>
+               <li class="m-2 col-12 border-bottom border-dark">
+                   <a href="#">blogs</a>
+               </li>
+               <li class="m-2 col-12 border-bottom border-dark">
+                   <a href="#">conatct</a>
+               </li>
+
+           </ul>
+        </nav>
+    </header>
+
+    <script>
+        
+
+
+ 
+        let  flag = true
+        let show = document.getElementById("b-menu")
+         let _lis = document.querySelectorAll('#b-menu>li')
+        
+      for(y=0; y<_lis.length; y++){
+        _lis[y].style.animationDelay=(y/2)+'s'
+      }
+
+
+        let _hi = document.getElementById('b-menu').clientHeight
+      //  alert(_hi)
+
+      document.getElementById('b-menu').style.height='0'
+
+        function dropMneu(_span){
+           y = _span.children
+            if(flag){
+                document.getElementById('b-menu').style.height=_hi+'px'
+                y[0].style.transform='rotate(-35deg)'
+                y[2].style.transform='rotate(35deg)'
+                y[1].style. opacity='0'
+
+
+
+                for(let i =0; i<_lis.length; i++){
+            
+                _lis[i].classList.remove('anime-li2')
+                _lis[i].classList.add('anime-li1')
+              }
+             
+                //flag = false
+            }else{
+                document.getElementById('b-menu').style.height=0+'px'
+                y[0].style.transform='rotate(0)'
+                y[2].style.transform='rotate(0)'
+                y[1].style. opacity='1'
+
+                for(let i =0; i<_lis.length; i++){
+                _lis[i].classList.remove('anime-li1')
+                _lis[i].classList.add('anime-li2')
+              }
+             
+            }
+            flag = !flag
+        } 
+    </script>
+</body>
+</html>
